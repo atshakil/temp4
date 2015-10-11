@@ -1,34 +1,34 @@
 require 'test_helper'
 
 class StaticPagesControllerTest < ActionController::TestCase
+
+  def setup
+    @base_title = "Project-test4"
+  end
+
   test "should get home" do
     get :home
     assert_response :success
+    assert_select "title", "Home | #{@base_title}"
   end
 
   test "should get help" do
     get :help
     assert_response :success
+    assert_select "title", "Help | #{@base_title}"
   end
-  
+
   test "should get about" do
     get :about
     assert_response :success
+    assert_select "title", "About | #{@base_title}"
   end
   
-  test "should get home title" do
-    get :home
-    assert_select "title", "Home Project-test4"
-  end
-
-  test "should get help title" do
-    get :help
-    assert_select "title", "Help Project-test4"
+  test "should get contact" do
+    get :contact
+    assert_response :success
+    assert_select "title", "Contact | #{@base_title}"
   end
   
-   test "should get about title" do
-    get :about
-    assert_select "title", "About Project-test4"
-  end
-
 end
+
