@@ -18,7 +18,7 @@ class StaticPagesControllerTest < ActionController::TestCase
   
   test "should get home title" do
     get :home
-    assert_select "title", "Home Project-test4"
+    assert_select "title", "Project-test4"
   end
 
   test "should get help title" do

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= yield(:page_name)%> Project-test4</title>
+  <title><%= full_title(yield(:page_name))%></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -12,3 +12,10 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
