@@ -1,0 +1,3 @@
+Initial Seed Data:
+
+User.create(name: "Alex Hash", email: "alex@mail.ru", password: "pass1234", password_confirmation: "pass1234")
